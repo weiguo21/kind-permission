@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd"
+	default-lazy-init="false">
+	<bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+		<property name="mergeSql" value="true" />
+		<property name="slowSqlMillis" value="3000" />
+		<property name="logSlowSql" value="true" />
+	</bean>
+	<bean id="ymBackDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+		destroy-method="close">
+		<property name="url" value="${jdbc.wheat.back.url}" />
+		<property name="username" value="${jdbc.wheat.back.user}" />
+		<property name="password" value="${jdbc.wheat.back.password}" />
+		<property name="initialSize" value="${jdbc.initPoolSize}" />
+		<property name="minIdle" value="${jdbc.minPoolSize}" />
+		<property name="maxActive" value="${jdbc.maxPoolSize}" />
+		<property name="maxWait" value="${jdbc.maxWaitTime}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+		<!-- 要启用PSCache，必须配置大于0，当大于0时， poolPreparedStatements自动触发修改为true. -->
+		<property name="maxOpenPreparedStatements" value="${jdbc.maxOpenPreparedStatements}" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxPoolPreparedStatementPerConnectionSize}" />
+		<property name="validationQuery" value="select 1 " />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	<bean id="ymOrderDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+		destroy-method="close">
+		<property name="url" value="${jdbc.wheat.order.url}" />
+		<property name="username" value="${jdbc.wheat.order.user}" />
+		<property name="password" value="${jdbc.wheat.order.password}" />
+		<property name="initialSize" value="${jdbc.initPoolSize}" />
+		<property name="minIdle" value="${jdbc.minPoolSize}" />
+		<property name="maxActive" value="${jdbc.maxPoolSize}" />
+		<property name="maxWait" value="${jdbc.maxWaitTime}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+		<!-- 要启用PSCache，必须配置大于0，当大于0时， poolPreparedStatements自动触发修改为true. -->
+		<property name="maxOpenPreparedStatements" value="${jdbc.maxOpenPreparedStatements}" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxPoolPreparedStatementPerConnectionSize}" />
+		<property name="validationQuery" value="select 1 " />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	<bean id="zxBackDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+		destroy-method="close">
+		<property name="url" value="${jdbc.joyseed.back.url}" />
+		<property name="username" value="${jdbc.joyseed.back.user}" />
+		<property name="password" value="${jdbc.joyseed.back.password}" />
+		<property name="initialSize" value="${jdbc.initPoolSize}" />
+		<property name="minIdle" value="${jdbc.minPoolSize}" />
+		<property name="maxActive" value="${jdbc.maxPoolSize}" />
+		<property name="maxWait" value="${jdbc.maxWaitTime}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+		<!-- 要启用PSCache，必须配置大于0，当大于0时， poolPreparedStatements自动触发修改为true. -->
+		<property name="maxOpenPreparedStatements" value="${jdbc.maxOpenPreparedStatements}" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxPoolPreparedStatementPerConnectionSize}" />
+		<property name="validationQuery" value="select 1 " />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	<bean id="zxOrderDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"
+		destroy-method="close">
+		<property name="url" value="${jdbc.joyseed.order.url}" />
+		<property name="username" value="${jdbc.joyseed.order.user}" />
+		<property name="password" value="${jdbc.joyseed.order.password}" />
+		<property name="initialSize" value="${jdbc.initPoolSize}" />
+		<property name="minIdle" value="${jdbc.minPoolSize}" />
+		<property name="maxActive" value="${jdbc.maxPoolSize}" />
+		<property name="maxWait" value="${jdbc.maxWaitTime}" />
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+		<!-- 要启用PSCache，必须配置大于0，当大于0时， poolPreparedStatements自动触发修改为true. -->
+		<property name="maxOpenPreparedStatements" value="${jdbc.maxOpenPreparedStatements}" />
+		<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxPoolPreparedStatementPerConnectionSize}" />
+		<property name="validationQuery" value="select 1 " />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<!-- 配置监控统计拦截的filters -->
+		<property name="filters" value="stat" />
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/spring/spring-mybatis-test.xml" />
+		<property name="mapperLocations" value="classpath*:mapper/*Mapper.xml" />
+	</bean>
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="dataSource" class="com.kind.common.datasource.CustomDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<entry key="ym_back_data_source" value-ref="ymBackDataSource"></entry>
+				<entry key="ym_order_data_source" value-ref="ymOrderDataSource"></entry>
+				<entry key="zx_back_data_source" value-ref="zxBackDataSource"></entry>
+				<entry key="zx_order_data_source" value-ref="zxOrderDataSource"></entry>
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="ymBackDataSource">
+		</property>
+	</bean>
+	<bean id="transactionManager" class="com.kind.common.datasource.KindDataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>

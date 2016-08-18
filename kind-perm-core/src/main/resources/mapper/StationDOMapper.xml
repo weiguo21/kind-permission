@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kind.perm.core.mapper.StationDOMapper">
+	<resultMap id="BaseResultMap" type="com.kind.perm.core.domain.StationDO">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="Code" property="code" jdbcType="VARCHAR" />
+		<result column="Name" property="name" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, Code, Name
+	</sql>
+	<select id="queryValidStation" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from cp_sm_station
+		where Status in(0,1)
+	</select>
+</mapper>

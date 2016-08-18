@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kind.perm.core.mapper.RolePermissionDOMapper">
+	<resultMap id="BaseResultMap" type="com.kind.perm.core.domain.RolePermissionDO">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="role_id" property="roleId" jdbcType="BIGINT" />
+		<result column="permission_id" property="permissionId" jdbcType="BIGINT" />
+		<result column="create_user" property="createUser" jdbcType="VARCHAR" />
+		<result column="modify_user" property="modifyUser" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id,role_id,permission_id,create_user,modify_user,create_time,modify_time
+	</sql>
+	<!-- 根据id查询 -->
+	<select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from sys_role_permission
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+	<!-- 根据roleId查询权限id -->
+	<select id="getPermIdsByRoleId" resultType="java.lang.Long" parameterType="java.lang.Long">
+		select
+		permission_id
+		from sys_role_permission
+		where role_id = #{roleId,jdbcType=BIGINT}
+	</select>
+	<!-- 根据id删除 -->
+	<delete id="removeById" parameterType="java.lang.Long">
+		delete from sys_role_permission
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+	<!-- 根据roleId和permissionId删除 -->
+	<delete id="removeByParamMap" parameterType="java.util.Map">
+		delete from sys_role_permission
+		where role_id = #{roleId,jdbcType=BIGINT}
+		and permission_id=#{permissionId,jdbcType=BIGINT}
+	</delete>
+	<!-- 保存 -->
+	<insert id="save" parameterType="com.kind.perm.core.domain.RolePermissionDO">
+		insert into sys_role_permission
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="roleId != null">
+				role_id,
+			</if>
+			<if test="permissionId != null">
+				permission_id,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+			<if test="modifyUser != null">
+				modify_user,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="modifyTime != null">
+				modify_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="roleId != null">
+				#{roleId,jdbcType=BIGINT},
+			</if>
+			<if test="permissionId != null">
+				#{permissionId,jdbcType=BIGINT},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				#{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyTime != null">
+				#{modifyTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<!-- 修改 -->
+	<update id="change" parameterType="com.kind.perm.core.domain.RolePermissionDO">
+		update sys_role_permission
+		<set>
+			<if test="roleId != null">
+				role_id = #{roleId,jdbcType=BIGINT},
+			</if>
+			<if test="permissionId != null">
+				permission_id = #{permissionId,jdbcType=BIGINT},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				modify_user = #{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyTime != null">
+				modify_time =now(),
+			</if>
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+</mapper>

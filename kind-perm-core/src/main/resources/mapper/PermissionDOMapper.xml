@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kind.perm.core.mapper.PermissionDOMapper">
+	<resultMap id="BaseResultMap" type="com.kind.perm.core.domain.PermissionDO">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="parent_id" property="parentId" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="VARCHAR" />
+		<result column="sort_no" property="sortNo" jdbcType="INTEGER" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="perm_code" property="permCode" jdbcType="VARCHAR" />
+		<result column="icon" property="icon" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="VARCHAR" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="create_user" property="createUser" jdbcType="VARCHAR" />
+		<result column="modify_user" property="modifyUser" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, parent_id, name, type, sort_no, url, perm_code, icon, status, description,
+		create_user,modify_user,create_time,modify_time
+	</sql>
+	<!-- 查询全部菜单 -->
+	<select id="getAllMenus" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_permission where 1=1
+		and type='F'
+		order by sort_no asc
+	</select>
+	<!-- 查询全部权限 -->
+	<select id="getAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_permission where status=1
+	</select>
+	<!-- 查询菜单下的操作权限. -->
+	<select id="queryMenuOperation" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from sys_permission where status=1
+		and type='O'
+		and parent_id = #{parentId,jdbcType=BIGINT}
+		order by
+		sort_no
+	</select>
+	<!-- 根据id查询 -->
+	<select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from sys_permission
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+	<!-- 根据id删除 -->
+	<delete id="removeById" parameterType="java.lang.Long">
+		delete from sys_permission
+		where id =
+		#{id,jdbcType=BIGINT}
+	</delete>
+	<!-- 保存 -->
+	<insert id="save" parameterType="com.kind.perm.core.domain.PermissionDO">
+		insert into sys_permission
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="parentId != null">
+				parent_id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="sortNo != null">
+				sort_no,
+			</if>
+			<if test="url != null">
+				url,
+			</if>
+			<if test="permCode != null">
+				perm_code,
+			</if>
+			<if test="icon != null">
+				icon,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+			<if test="modifyUser != null">
+				modify_user,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="modifyTime != null">
+				modify_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="parentId != null">
+				#{parentId,jdbcType=BIGINT},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=VARCHAR},
+			</if>
+			<if test="sortNo != null">
+				#{sortNo,jdbcType=INTEGER},
+			</if>
+			<if test="url != null">
+				#{url,jdbcType=VARCHAR},
+			</if>
+			<if test="permCode != null">
+				#{permCode,jdbcType=VARCHAR},
+			</if>
+			<if test="icon != null">
+				#{icon,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				#{description,jdbcType=VARCHAR},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				#{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyTime != null">
+				#{modifyTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<!-- 修改 -->
+	<update id="change" parameterType="com.kind.perm.core.domain.PermissionDO">
+		update sys_permission
+		<set>
+			<if test="parentId != null">
+				parent_id = #{parentId,jdbcType=BIGINT},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=VARCHAR},
+			</if>
+			<if test="sortNo != null">
+				sort_no = #{sortNo,jdbcType=INTEGER},
+			</if>
+			<if test="url != null">
+				url = #{url,jdbcType=VARCHAR},
+			</if>
+			<if test="permCode != null">
+				perm_code = #{permCode,jdbcType=VARCHAR},
+			</if>
+			<if test="icon != null">
+				icon = #{icon,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				description = #{description,jdbcType=VARCHAR},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				modify_user = #{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			modify_time = now(),
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<!-- 获取用户权限. -->
+	<select id="getPermissionsByUserId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+	SELECT DISTINCT * 
+		FROM
+  		(SELECT 
+    	p.* 
+  		FROM
+    	sys_permission p 
+    	INNER JOIN sys_role_permission rp 
+      	ON p.id = rp.permission_id 
+    	INNER JOIN sys_role r 
+      	ON r.id = rp.ROLE_ID 
+    	INNER JOIN sys_user_role ur 
+      	ON ur.role_id = rp.role_id 
+    	INNER JOIN sys_user u 
+      	ON u.id = ur.user_id 
+  		WHERE u.id =#{userId,jdbcType=BIGINT}
+  		ORDER BY p.sort_no,
+    	p.id) menus order by sort_no
+	</select>
+</mapper>

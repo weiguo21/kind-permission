@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kind.perm.core.mapper.UserDOMapper">
+	<resultMap id="UserResultMap" type="com.kind.perm.core.domain.UserDO">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+		<result column="gender" property="gender" jdbcType="SMALLINT" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="mobile" property="mobile" jdbcType="VARCHAR" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="visit_count" property="visitCount" jdbcType="INTEGER" />
+		<result column="last_visit_time" property="lastVisitTime" jdbcType="TIMESTAMP" />
+		<result column="create_user" property="createUser" jdbcType="VARCHAR" />
+		<result column="modify_user" property="modifyUser" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, username, password, name, birthday, gender, email, mobile, description, status,
+		visit_count,last_visit_time,create_user,modify_user,create_time, modify_time
+	</sql>
+	<!-- 根据id查询 -->
+	<select id="getById" resultMap="UserResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+	<!-- 根据用户名查询 -->
+	<select id="getByUsername" resultMap="UserResultMap" parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		where username = #{username,jdbcType=VARCHAR}
+	</select>
+	<sql id="whereCondition">
+		<if test="username != null and username != '' ">
+			and username = #{username, jdbcType=VARCHAR}
+		</if>
+		<if test="mobile != null and mobile !='' ">
+			AND mobile = #{mobile, jdbcType=VARCHAR}
+		</if>
+		<if test="createTimeStart != null">
+			<![CDATA[ AND create_time >= #{createTimeStart, jdbcType=TIMESTAMP} ]]>
+		</if>
+		<if test="createTimeEnd != null">
+			<![CDATA[ AND create_time <= #{createTimeEnd, jdbcType=TIMESTAMP} ]]>
+		</if>
+	</sql>
+	<!-- 分页 -->
+	<select id="page" resultMap="UserResultMap" parameterType="com.kind.perm.core.dto.request.UserQueryRequest">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<include refid="whereCondition"></include>
+		</trim>
+		limit #{startRow},#{pageSize}
+	</select>
+	<!-- 获取记录数 -->
+	<select id="count" resultType="java.lang.Integer" parameterType="com.kind.perm.core.dto.request.UserQueryRequest">
+		select
+		count(*)
+		from sys_user
+		<trim prefix="WHERE" prefixOverrides="AND">
+			<include refid="whereCondition"></include>
+		</trim>
+	</select>
+	<!-- 保存 -->
+	<insert id="save" parameterType="com.kind.perm.core.domain.UserDO">
+		insert into sys_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="username != null">
+				username,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="birthday != null">
+				birthday,
+			</if>
+			<if test="gender != null">
+				gender,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="mobile != null">
+				mobile,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="visitCount != null">
+				visit_count,
+			</if>
+			<if test="lastVisitTime != null">
+				last_visit_time,
+			</if>
+			<if test="createUser != null">
+				create_user,
+			</if>
+			<if test="modifyUser != null">
+				modify_user,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="modifyTime != null">
+				modify_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="username != null">
+				#{username,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="birthday != null">
+				#{birthday,jdbcType=TIMESTAMP},
+			</if>
+			<if test="gender != null">
+				#{gender,jdbcType=INTEGER},
+			</if>
+			<if test="email != null">
+				#{email,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile != null">
+				#{mobile,jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				#{description,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=INTEGER},
+			</if>
+			<if test="visitCount != null">
+				#{visitCount,jdbcType=INTEGER},
+			</if>
+			<if test="lastVisitTime != null">
+				#{lastVisitTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				#{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				#{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyTime != null">
+				#{modifyTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<!-- 修改 -->
+	<update id="change" parameterType="com.kind.perm.core.domain.UserDO">
+		update sys_user
+		<set>
+			<if test="username != null">
+				username = #{username,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="birthday != null">
+				birthday = #{birthday,jdbcType=TIMESTAMP},
+			</if>
+			<if test="gender != null">
+				gender = #{gender,jdbcType=INTEGER},
+			</if>
+			<if test="email != null">
+				email = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile != null">
+				mobile = #{mobile,jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				description = #{description,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=INTEGER},
+			</if>
+			<if test="visitCount != null">
+				visit_count = #{visitCount,jdbcType=INTEGER},
+			</if>
+			<if test="lastVisitTime != null">
+				last_visit_time = #{lastVisitTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createUser != null">
+				create_user = #{createUser,jdbcType=VARCHAR},
+			</if>
+			<if test="modifyUser != null">
+				modify_user = #{modifyUser,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="modifyTime != null">
+				modify_time = now(),
+			</if>
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	<delete id="removeById" parameterType="java.lang.Long">
+		delete from sys_user
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+</mapper>
