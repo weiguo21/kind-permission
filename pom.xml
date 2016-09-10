@@ -44,9 +44,34 @@
 	</properties>
 	<modules>
 		<module>kind-perm-common</module>
+		<module>kind-session</module>
 		<module>kind-perm-core</module>
 		<module>kind-perm-web</module>
 	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<!-- 子项目默认继承配置，也可以自己指定版本 -->
+		<dependencies>
+			<dependency>
+				<groupId>com.kafa.common</groupId>
+				<artifactId>kafa-common-base</artifactId>
+				<version>1.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -111,6 +136,18 @@
 						</connectors>
 					</configuration>
 				</plugin>
+				<plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <port>9090</port>
+                    <path>/</path>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <finalName>kafa-back-web</finalName>
+                    <server>tomcat7</server>
+                </configuration>
+            </plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
