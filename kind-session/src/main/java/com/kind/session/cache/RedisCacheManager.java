@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.kind.session.redis.RedisManager;
-
+@SuppressWarnings("rawtypes")
 public class RedisCacheManager implements CacheManager {
 
 	private static final Logger logger = LoggerFactory
@@ -44,6 +44,7 @@ public class RedisCacheManager implements CacheManager {
 		this.keyPrefix = keyPrefix;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public <K, V> Cache<K, V> getCache(String name) throws CacheException {
 		logger.debug("获取名称为: " + name + " 的RedisCache实例");
