@@ -1,4 +1,4 @@
-package com.kind.session;
+package com.kind.session.redis;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package com.kind.session;
+package com.kind.session.redis;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -10,6 +10,8 @@ import org.apache.shiro.session.UnknownSessionException;
 import org.apache.shiro.session.mgt.eis.AbstractSessionDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.kind.session.SerializeUtils;
 
 public class RedisSessionDAO extends AbstractSessionDAO {
 

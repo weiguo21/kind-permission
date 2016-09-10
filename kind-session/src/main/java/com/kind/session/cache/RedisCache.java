@@ -1,4 +1,4 @@
-package com.kind.session;
+package com.kind.session.cache;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,6 +12,9 @@ import org.apache.shiro.cache.CacheException;
 import org.apache.shiro.util.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.kind.session.SerializeUtils;
+import com.kind.session.redis.RedisManager;
 
 public class RedisCache<K, V> implements Cache<K, V> {
 	
