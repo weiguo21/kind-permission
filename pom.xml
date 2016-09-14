@@ -66,8 +66,8 @@
 		<!-- 子项目默认继承配置，也可以自己指定版本 -->
 		<dependencies>
 			<dependency>
-				<groupId>com.kafa.common</groupId>
-				<artifactId>kafa-common-base</artifactId>
+				<groupId>com.kind.common</groupId>
+				<artifactId>kind-perm-common</artifactId>
 				<version>1.0</version>
 			</dependency>
 		</dependencies>

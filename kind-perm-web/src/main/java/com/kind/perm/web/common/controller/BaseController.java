@@ -13,10 +13,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 
 import com.kind.common.domain.LogActor;
 import com.kind.common.dto.KafaDataGrid;
+import com.kind.common.exception.ServiceException;
 import com.kind.common.persistence.PageView;
 import com.kind.common.uitls.IPUtils;
 import com.kind.perm.core.shrio.SessionUtils;
@@ -42,6 +44,26 @@ public class BaseController {
 	 * 日志对象
 	 */
 	protected Logger logger = LoggerFactory.getLogger(getClass());
+
+	/**
+	 * 基于@ExceptionHandler异常处理 .
+	 * 
+	 * @param request
+	 * @param ex
+	 * @return
+	 */
+	@ExceptionHandler
+	public String exp(HttpServletRequest request, Exception ex) {
+		request.setAttribute("ex", ex);
+		// 根据不同错误转向不同页面
+		if (ex instanceof ServiceException) {
+			return "business_error";
+		} else if (ex instanceof ParameterException) {
+			return "parameter_error";
+		} else {
+			return "error";
+		}
+	}
 
 	/**
 	 * 初始化数据绑定 . <br/>
