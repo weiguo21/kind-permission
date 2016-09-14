@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 
 import com.kind.common.domain.LogActor;
 import com.kind.common.dto.KafaDataGrid;
+import com.kind.common.exception.ParameterException;
 import com.kind.common.exception.ServiceException;
 import com.kind.common.persistence.PageView;
 import com.kind.common.uitls.IPUtils;
@@ -37,7 +38,7 @@ import com.kind.perm.web.common.DateTypeEditor;
 public class BaseController {
 	/**
 	 * 请求后缀
-	 */
+	 */	
 	final static String SUFFIX = "";
 
 	/**

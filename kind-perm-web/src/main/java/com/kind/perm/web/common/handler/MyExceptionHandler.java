@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.kind.common.exception.ParameterException;
 import com.kind.common.exception.ServiceException;
 
 /**
