@@ -27,8 +27,8 @@
 			<version>2.4.2</version>
 		</dependency>
 		<dependency>
-			<groupId>com.kafa.common</groupId>
-			<artifactId>kafa-common-base</artifactId>
+			<groupId>com.kind.common</groupId>
+			<artifactId>kind-perm-common</artifactId>
 		</dependency>
 	</dependencies>
 </project>

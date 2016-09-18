@@ -54,7 +54,7 @@ public class BaseController {
 	 * @return
 	 */
 	@ExceptionHandler
-	public String exp(HttpServletRequest request, Exception ex) {
+	public String exception(HttpServletRequest request, Exception ex) {
 		request.setAttribute("ex", ex);
 		// 根据不同错误转向不同页面
 		if (ex instanceof ServiceException) {
