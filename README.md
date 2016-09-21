@@ -1,10 +1,9 @@
 #kind-permission
 <div>
     <p>
-        java实现的通用权限管理系统
+        Spring+SpringMVC+MyBatis+Shiro+MySQL+Redis+Maven+EasyUI+Bootstrap实现的通用权限管理系统 ,参考了一些优秀的开源项目.
     </p>
 </div>
-
 <div>
     <h3>项目结构</h3>
     <ul>
@@ -15,7 +14,7 @@
         <li>samples-patterns  设计模式实战</li>
     </ul>
 </div>
-div>
+<div>
     <h3>技术实现</h3>
     <ul>
         <li>使用spring</li>
@@ -27,7 +26,6 @@ div>
         <li>JSON工具fast-json</li>
     </ul>
 </div>
-
 <div>
     <h3>下载</h3>
     <ul>
