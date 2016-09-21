@@ -28,10 +28,10 @@
 </div>
 <div>
     <h3>下载</h3>
-    <ul>
-        <li>oschina <a href="https://git.oschina.net/weiguo21/kind-permission.git">kind-permission</a></li>
-        <li>github <a href="https://github.com/weiguo21/kind-permission.git">kind-permission</a></li>
-    </ul>
+    <ol>
+        <li><p>oschina <a href="https://git.oschina.net/weiguo21/kind-permission.git">kind-permission</a></p></li>
+        <li><p>github &nbsp;<a href="https://github.com/weiguo21/kind-permission.git">kind-permission</a></p></li>
+    </ol>
 </div>
 
 <div>
