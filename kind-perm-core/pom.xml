@@ -24,7 +24,6 @@
 		<dependency>
 			<groupId>com.kind.common</groupId>
 			<artifactId>kind-perm-common</artifactId>
-			<version>1.0</version>
 		</dependency>
 	</dependencies>
 </project>
