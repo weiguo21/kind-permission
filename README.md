@@ -11,7 +11,6 @@
         <li>kind-perm-core    权限核心逻辑</li>
         <li>kind-perm-web     web页面相关</li>
         <li>kind-session      基于redis的分布式session实现</li>
-        <li>samples-patterns  设计模式实战</li>
     </ul>
 </div>
 <div>
