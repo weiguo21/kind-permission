@@ -28,21 +28,21 @@ import com.kind.common.exception.ServiceException;
  * @since JDK 1.7
  * @see
  */
-public class MyExceptionHandler implements HandlerExceptionResolver {
+public class GlobalExceptionHandler implements HandlerExceptionResolver {
 
 	@Override
 	public ModelAndView resolveException(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception ex) {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("ex", ex);
+		model.put("exception", ex.getMessage());
 		/**
 		 * 根据不同错误转向不同页面
 		 */
 		if (ex instanceof ServiceException) {
-			return new ModelAndView("business_error", model);
+			return new ModelAndView("error/500", model);
 		} else if (ex instanceof ParameterException) {
-			return new ModelAndView("parameter_error", model);
+			return new ModelAndView("error/parameter_err", model);
 		} else {
-			return new ModelAndView("error", model);
+			return new ModelAndView("error/500", model);
 		}
 	}
 

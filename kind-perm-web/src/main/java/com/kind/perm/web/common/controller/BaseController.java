@@ -54,15 +54,15 @@ public class BaseController {
 	 * @return
 	 */
 	@ExceptionHandler
-	public String exception(HttpServletRequest request, Exception ex) {
-		request.setAttribute("ex", ex);
+	public String handle(HttpServletRequest request, Exception ex) {
+		request.setAttribute("exception", ex.getMessage());
 		// 根据不同错误转向不同页面
 		if (ex instanceof ServiceException) {
-			return "business_error";
+			return "error/500";
 		} else if (ex instanceof ParameterException) {
-			return "parameter_error";
+			return "error/parameter_err";
 		} else {
-			return "error";
+			return "error/500";
 		}
 	}
 
