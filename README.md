@@ -59,7 +59,7 @@
                 默认用户名admin,密码：admin123
             </p>
         </li>
-        <li>双击kind-perm-web/bin/jetty.sh启动。</li>
+        <li>双击kind-perm-web/bin/jetty-run.bat启动。</li>
     </ol>
 </div>
 
