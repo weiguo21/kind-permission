@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="kind-perm-web:war">
-    <output-path>$PROJECT_DIR$/kind-perm-web/target</output-path>
-    <root id="archive" name="kind-perm-web-1.0.war">
-      <element id="artifact" artifact-name="kind-perm-web:war exploded" />
-    </root>
-  </artifact>
-</component>
