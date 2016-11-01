@@ -43,7 +43,7 @@
 		<httpcomponents.version>4.3.2</httpcomponents.version>
 	</properties>
 	<modules>
-		<module>kind-perm-common</module>
+		<module>kind-perm-base</module>
 		<module>kind-session</module>
 		<module>kind-perm-core</module>
 		<module>kind-perm-web</module>

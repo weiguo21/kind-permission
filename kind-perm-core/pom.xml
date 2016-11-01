@@ -23,7 +23,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.kind.common</groupId>
-			<artifactId>kind-perm-common</artifactId>
+			<artifactId>kind-perm-base</artifactId>
 		</dependency>
 	</dependencies>
 </project>

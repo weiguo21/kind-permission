@@ -66,9 +66,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
 	 */
 	public RedisCache(RedisManager cache, 
 				String prefix){
-		 
 		this( cache );
-		
 		// set the prefix
 		this.keyPrefix = prefix;
 	}
