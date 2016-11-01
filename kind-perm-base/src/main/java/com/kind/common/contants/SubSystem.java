@@ -19,7 +19,8 @@ package com.kind.common.contants;
  * @see
  */
 public enum SubSystem {
-	JOYSEED("JOYSEED", "卓溪"), WHEAT("WHEAT", "原麦山丘");
+	JOYSEED("JOYSEED", "卓溪"),
+	WHEAT("WHEAT", "原麦山丘");
 
 	private String code;
 	private String name;

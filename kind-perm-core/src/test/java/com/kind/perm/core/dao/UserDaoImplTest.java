@@ -7,7 +7,7 @@
  *
 */
 
-package com.kind.perm.core.system.dao;
+package com.kind.perm.core.dao;
 
 import javax.annotation.Resource;
 

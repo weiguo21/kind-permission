@@ -74,7 +74,7 @@
 <hr/>
 <div>
     <br/>
-    From <a href="">www.kindapp.net</a>
+    From <a href="http://www.cnblogs.com/weiguo21">www.kindapp.net</a>
     <br/>
     Email <a href="mailto:cary20@126.com">cary20@126.com</a>
 </div>

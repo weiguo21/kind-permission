@@ -4,7 +4,7 @@
 	<groupId>com.kind.perm.core</groupId>
 	<artifactId>kind-perm-core</artifactId>
 	<packaging>jar</packaging>
-	<name>kind-wheat-core</name>
+	<name>kind-perm-core</name>
 	<url>http://maven.apache.org</url>
 	<parent>
 		<groupId>com.kind</groupId>

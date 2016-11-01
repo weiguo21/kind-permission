@@ -1,10 +1,4 @@
-/**
- * Project Name:kafa-back-web
- * Package Name:com.kafa.back.web.common.handler
- * Created on:2016年9月14日上午10:18:45
- * Copyright (c) 2016, http://www.mcake.com All Rights Reserved.
- *
-*/
+
 
 package com.kind.perm.web.common.handler;
 
