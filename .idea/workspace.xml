@@ -2,69 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47df71fe-0151-42eb-922d-0b241a122aa0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kind-perm-base/kind-perm-base.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kind-perm-core/kind-perm-core.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kind-perm-parent.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kind-perm-web/kind-perm-web.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kind-session/kind-session.iml" />
-      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\test\java\com\kafa\common\core\queue\NameValue.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kind-session/src/main/java/com/kind/session/cache/RedisCache.java" afterPath="$PROJECT_DIR$/kind-session/src/main/java/com/kind/session/cache/RedisCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kind-session/src/main/java/com/kind/session/cache/RedisCacheManager.java" afterPath="$PROJECT_DIR$/kind-session/src/main/java/com/kind/session/cache/RedisCacheManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kind-perm-core/pom.xml" afterPath="$PROJECT_DIR$/kind-perm-core/pom.xml" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\.gitignore" afterPath="$PROJECT_DIR$/kind-perm-base/.gitignore" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\pom.xml" afterPath="$PROJECT_DIR$/kind-perm-base/pom.xml" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\client\KindHttpClient.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/client/KindHttpClient.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\config\CustomizedPropertyConfigurer.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/config/CustomizedPropertyConfigurer.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\config\PropertyReloader.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/config/PropertyReloader.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\contants\Modules.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/contants/Modules.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\contants\SubSystem.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/contants/SubSystem.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\datasource\CustomDataSource.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/datasource/CustomDataSource.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\datasource\DataSourceKey.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/datasource/DataSourceKey.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\datasource\KindDataSourceHolder.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/datasource/KindDataSourceHolder.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\datasource\KindDataSourceTransactionManager.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/datasource/KindDataSourceTransactionManager.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\domain\CodeNameDO.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/domain/CodeNameDO.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\domain\Domain.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/domain/Domain.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\domain\LogActor.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/domain/LogActor.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\BaseResultCode.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/BaseResultCode.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\BaseResultErrorType.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/BaseResultErrorType.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\BaseSingleResult.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/BaseSingleResult.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\KafaDataGrid.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/KafaDataGrid.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\KindResult.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/KindResult.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\dto\ResultT.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/dto/ResultT.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\BaseException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/BaseException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\CaptchaException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/CaptchaException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\DaoException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/DaoException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\Exceptions.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/Exceptions.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\ExistedException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/ExistedException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\ParameterException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/ParameterException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\exception\ServiceException.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/exception/ServiceException.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\mapper\JSONMapper.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/mapper/JSONMapper.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\persistence\BaseDaoMybatis.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/persistence/BaseDaoMybatis.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\persistence\PageQuery.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/persistence/PageQuery.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\persistence\PageView.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/persistence/PageView.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\persistence\mybatis\BaseDaoMyBatisImpl.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/persistence/mybatis/BaseDaoMyBatisImpl.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\trace\MethodTimeAdvice.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/trace/MethodTimeAdvice.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\trace\annotation\OpLogResouce.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/trace/annotation/OpLogResouce.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\BeanUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/BeanUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\BytesUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/BytesUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\DateUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/DateUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\IDUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/IDUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\IPUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/IPUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\NumberUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/NumberUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\StringUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/StringUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\codec\Digests.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/codec/Digests.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\codec\Encodes.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/codec/Encodes.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\codec\EncryptUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/codec/EncryptUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\codec\MD5Utils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/codec/MD5Utils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\uitls\codec\StringEscapeEditor.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/uitls/codec/StringEscapeEditor.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\validation\RegexType.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/validation/RegexType.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\validation\RegexUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/validation/RegexUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\validation\ValidateProvider.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/validation/ValidateProvider.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\validation\annotation\Validation.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/validation/annotation/Validation.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\web\MediaTypes.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/web/MediaTypes.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\main\java\com\kind\common\web\WebUtils.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/main/java/com/kind/common/web/WebUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\samples\kind-permission\kind-perm-common\src\test\java\com\kafa\common\client\KafaHttpClientTest.java" afterPath="$PROJECT_DIR$/kind-perm-base/src/test/java/com/kind/common/client/KindHttpClientTest.java" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\artifacts\kind_perm_web_war.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\artifacts\kind_perm_web_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__cglib_cglib_nodep_3_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_1_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__ch_qos_logback_logback_core_1_1_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__com_alibaba_druid_1_0_18.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__com_alibaba_fastjson_1_2_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__com_github_axet_kaptcha_0_0_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__com_jhlabs_filters_2_0_235.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_codec_commons_codec_1_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_fileupload_commons_fileupload_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_io_commons_io_2_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__javax_servlet_jsp_api_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__javax_servlet_jstl_1_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__javax_transaction_jta_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_31.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__net_sf_ehcache_ehcache_core_2_4_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__net_sf_ehcache_ehcache_web_2_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__nl_bitwalker_UserAgentUtils_1_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_commons_commons_pool2_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_httpcomponents_httpclient_4_3_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_httpcomponents_httpcore_4_3_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_shiro_shiro_core_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_shiro_shiro_ehcache_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_shiro_shiro_spring_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_shiro_shiro_web_1_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_apache_velocity_velocity_1_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_aspectj_aspectjrt_1_8_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_aspectj_aspectjweaver_1_8_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_hibernate_hibernate_validator_annotation_processor_4_3_1_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_mybatis_mybatis_3_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_aop_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_beans_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_context_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_context_support_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_core_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_expression_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_test_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_tx_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_web_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__org_springframework_spring_webmvc_4_1_3_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__redis_clients_jedis_2_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\libraries\Maven__taglibs_standard_1_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\workspace\samples\kind-permission\.idea\workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="kind-perm-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -221,6 +223,7 @@
         <option value="$PROJECT_DIR$/kind-perm-base/src/test/java/com/kind/common/client/KindHttpClientTest.java" />
         <option value="$PROJECT_DIR$/kind-perm-core/pom.xml" />
         <option value="$PROJECT_DIR$/kind-perm-base/pom.xml" />
+        <option value="$PROJECT_DIR$/kind-perm-parent.iml" />
       </list>
     </option>
   </component>
@@ -708,6 +711,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -724,12 +733,12 @@
       <created>1477966874451</created>
       <option name="number" value="Default" />
       <updated>1477966874451</updated>
-      <workItem from="1477966875854" duration="936000" />
+      <workItem from="1477966875854" duration="1508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="936000" />
+    <option name="totallyTimeSpent" value="1508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
