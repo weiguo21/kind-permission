@@ -17,16 +17,16 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for kind-perm-common" enabled="true">
+      <profile default="false" name="Annotation profile for kind-perm-base" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="kind-perm-common" />
+        <module name="kind-perm-base" />
       </profile>
-      <profile default="false" name="Annotation profile for kind-perm-core" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="kind-perm-core" />
@@ -47,7 +47,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="kind-perm-common" target="1.7" />
+      <module name="kind-perm-base" target="1.7" />
       <module name="kind-perm-core" target="1.7" />
       <module name="kind-perm-parent" target="1.7" />
       <module name="kind-perm-web" target="1.7" />
