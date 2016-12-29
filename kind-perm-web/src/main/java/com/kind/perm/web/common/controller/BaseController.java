@@ -1,21 +1,5 @@
 package com.kind.perm.web.common.controller;
 
-import java.beans.PropertyEditorSupport;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.InitBinder;
-
 import com.kind.common.domain.LogActor;
 import com.kind.common.dto.KafaDataGrid;
 import com.kind.common.exception.ParameterException;
@@ -24,6 +8,20 @@ import com.kind.common.persistence.PageView;
 import com.kind.common.uitls.IPUtils;
 import com.kind.perm.core.shrio.SessionUtils;
 import com.kind.perm.web.common.DateTypeEditor;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.InitBinder;
+
+import javax.servlet.http.HttpServletRequest;
+import java.beans.PropertyEditorSupport;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -148,5 +146,6 @@ public class BaseController {
 		logActor.setIpAddr(ipAddr);
 		return logActor;
 	}
+
 
 }
