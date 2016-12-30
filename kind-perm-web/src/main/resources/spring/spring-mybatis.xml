@@ -14,6 +14,5 @@
 		<setting name="autoMappingBehavior" value="FULL" />
 		<setting name="defaultExecutorType" value="BATCH" />
 		<setting name="defaultStatementTimeout" value="25000" />
-		<setting name="logImpl" value="STDOUT_LOGGING"/>
 	</settings>
 </configuration>
